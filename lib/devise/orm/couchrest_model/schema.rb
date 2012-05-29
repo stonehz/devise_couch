@@ -2,7 +2,8 @@ module Devise
   module Orm
     module CouchrestModel
       module Schema
-        include Devise::Schema
+        #include Devise::Schema
+        require 'devise/schema'
         # Tell how to apply schema methods.
         def apply_devise_schema(name, type, options={})
           return unless Devise.apply_schema
